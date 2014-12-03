@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HPDCodeCollection.h"
 
 @interface ViewController ()
 

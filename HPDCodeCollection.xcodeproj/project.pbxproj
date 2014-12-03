@@ -18,6 +18,9 @@
 		2D7AE7191A2EDE9200CF11F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7AE7181A2EDE9200CF11F4 /* Foundation.framework */; };
 		2D7AE71B1A2EDE9A00CF11F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7AE71A1A2EDE9A00CF11F4 /* UIKit.framework */; };
 		2D7AE71D1A2EDEA100CF11F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7AE71C1A2EDEA100CF11F4 /* CoreGraphics.framework */; };
+		2D7AE72A1A2EF2F600CF11F4 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7AE7291A2EF2F600CF11F4 /* NSString+Utils.m */; };
+		2D7AE72E1A2EF30900CF11F4 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7AE72D1A2EF30900CF11F4 /* UIView+Utils.m */; };
+		2D7AE7311A2EF48400CF11F4 /* HPDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7AE7301A2EF48400CF11F4 /* HPDUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,13 @@
 		2D7AE7181A2EDE9200CF11F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2D7AE71A1A2EDE9A00CF11F4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2D7AE71C1A2EDEA100CF11F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2D7AE71E1A2EE68600CF11F4 /* HPDCodeCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPDCodeCollection.h; sourceTree = "<group>"; };
+		2D7AE7281A2EF2F600CF11F4 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		2D7AE7291A2EF2F600CF11F4 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		2D7AE72C1A2EF30900CF11F4 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		2D7AE72D1A2EF30900CF11F4 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		2D7AE72F1A2EF48400CF11F4 /* HPDUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPDUtils.h; sourceTree = "<group>"; };
+		2D7AE7301A2EF48400CF11F4 /* HPDUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPDUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +149,13 @@
 		2D7AE7121A2EDE7700CF11F4 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2D7AE72B1A2EF30900CF11F4 /* UIView+Utils */,
+				2D7AE7271A2EF2F600CF11F4 /* NSString+Utils */,
 				2D7AE7131A2EDE7700CF11F4 /* AlertViewBlock */,
 				2D7AE7161A2EDE7700CF11F4 /* HPDUserMacros.h */,
+				2D7AE71E1A2EE68600CF11F4 /* HPDCodeCollection.h */,
+				2D7AE72F1A2EF48400CF11F4 /* HPDUtils.h */,
+				2D7AE7301A2EF48400CF11F4 /* HPDUtils.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -152,6 +167,24 @@
 				2D7AE7151A2EDE7700CF11F4 /* UIAlertView+Blocks.m */,
 			);
 			path = AlertViewBlock;
+			sourceTree = "<group>";
+		};
+		2D7AE7271A2EF2F600CF11F4 /* NSString+Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2D7AE7281A2EF2F600CF11F4 /* NSString+Utils.h */,
+				2D7AE7291A2EF2F600CF11F4 /* NSString+Utils.m */,
+			);
+			path = "NSString+Utils";
+			sourceTree = "<group>";
+		};
+		2D7AE72B1A2EF30900CF11F4 /* UIView+Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2D7AE72C1A2EF30900CF11F4 /* UIView+Utils.h */,
+				2D7AE72D1A2EF30900CF11F4 /* UIView+Utils.m */,
+			);
+			path = "UIView+Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D7AE6F51A2EDDCE00CF11F4 /* ViewController.m in Sources */,
+				2D7AE72A1A2EF2F600CF11F4 /* NSString+Utils.m in Sources */,
+				2D7AE72E1A2EF30900CF11F4 /* UIView+Utils.m in Sources */,
 				2D7AE7171A2EDE7700CF11F4 /* UIAlertView+Blocks.m in Sources */,
 				2D7AE6F21A2EDDCE00CF11F4 /* AppDelegate.m in Sources */,
+				2D7AE7311A2EF48400CF11F4 /* HPDUtils.m in Sources */,
 				2D7AE6EF1A2EDDCE00CF11F4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define showAlertMessage(msg)                   [UIAlertView showMessage:msg]
+#define showAlertMessageWithCancle(msg, cancle) [UIAlertView showMessage:msg withCancle:cancle]
+
 typedef void (^DismissBlock)(NSInteger buttonIndex);
 typedef void (^CancelBlock)();
 
@@ -21,7 +24,9 @@ typedef void (^CancelBlock)();
                               onDismiss:(DismissBlock) dismissed
                                onCancel:(CancelBlock) cancelled;
 
-+ (void) showMessage:(NSString*) message;
++ (void)showMessage:(NSString*) message;
+
++ (void)showMessage:(NSString *)message withCancle:(CancelBlock)cancle;
 
 
 @end
