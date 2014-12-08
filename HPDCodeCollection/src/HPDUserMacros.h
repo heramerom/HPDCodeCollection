@@ -67,6 +67,12 @@
 #define __screen_width              ([UIScreen mainScreen].bounds.size.width)
 #define kScreenWidth                __screen_width
 
+// view controller
+#define __push(vc)          [self.navigationController pushViewController:(vc) animated:YES]
+#define __pop()             [self.navigationController popViewControllerAnimated:YES]
+#define __popTo(vc)         [self.navigationController popToViewController:(vc) animated:YES]
+#define __popToRoot()       [self.navigationController popToRootViewControllerAnimated:YES]
+
 // foundtion
 #define __user_default          [NSUserDefaults standardUserDefaults]
 #define USER_DEFAULT            __user_default
@@ -76,7 +82,7 @@
 #define defaultString(value, defaultValue)  (((value) && value.length == 0)?(value):(defaultValue))
 #define defaultObject(value, defaultValue)  ((value)?(value):(defaultValue))
 
-#define wasStringWasEmpty(str)              (((value) && value.length == 0)?YES:NO)
+#define wasStringEmpty(str)              (((value) && value.length == 0)?YES:NO)
 
 #define __format_string(format, ...)        [NSString stringWithFormat:format, __VA_ARGS__]
 #define NSStringWithFormat(format, ...)     [NSString stringWithFormat:format, __VA_ARGS__]
