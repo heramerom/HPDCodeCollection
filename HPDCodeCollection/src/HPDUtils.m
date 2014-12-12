@@ -65,9 +65,19 @@
 
 @implementation NSDictionary(Keys)
 
-- (BOOL)containsKey:(id)obj
+- (BOOL)containsKey:(id)key
 {
-    return [[self allKeys] containsObject:obj];
+#if DEBUG
+    if (![[self allKeys] containsObject:key]) {
+        NSLog(@"--> %@ dose not contains the key %@", [self class], key);
+    }
+#endif
+    return [[self allKeys] containsObject:key];
+}
+
+- (id)objectForKey:(id)aKey defaultObject:(id)obj
+{
+    return ([self containsKey:aKey]?[self objectForKey:aKey]:obj);
 }
 
 @end

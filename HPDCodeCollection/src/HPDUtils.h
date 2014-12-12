@@ -72,6 +72,8 @@
 
 - (BOOL)containsKey:(id)key;
 
+- (id)objectForKey:(id)aKey defaultObject:(id)obj;
+
 @end
 
 
