@@ -59,3 +59,19 @@
 
 @end
 
+
+@interface NSDictionary(Keys)
+
+/**
+ *  the dictionary weather contains the key
+ *
+ *  @param key the key
+ *
+ *  @return YES if contains
+ */
+
+- (BOOL)containsKey:(id)key;
+
+@end
+
+

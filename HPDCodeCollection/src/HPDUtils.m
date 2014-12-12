@@ -63,3 +63,13 @@
 
 @end
 
+@implementation NSDictionary(Keys)
+
+- (BOOL)containsKey:(id)obj
+{
+    return [[self allKeys] containsObject:obj];
+}
+
+@end
+
+
