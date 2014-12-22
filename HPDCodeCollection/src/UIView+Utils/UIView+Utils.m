@@ -17,8 +17,8 @@
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(point.x-MIN(point.x, toPoint.x), point.y-MIN(point.y, toPoint.y))];
     [path addLineToPoint:CGPointMake(toPoint.x-MIN(point.x, toPoint.x), toPoint.y-MIN(point.y, toPoint.y))];
-    [path setLineWidth:lineWidth];
     layer.path = path.CGPath;
+    layer.lineWidth = lineWidth;
     layer.strokeColor = lineColor.CGColor;
     [self.layer addSublayer:layer];
 }
