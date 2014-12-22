@@ -105,4 +105,12 @@
 #define DEGREES_TO_RADIANS(angle)       ((angle)/180.0 *M_PI)
 #define RADIANS_TO_DEGREES(radians)     ((radians)*(180.0/M_PI))
 
+// view frame rect
+#define v_getHeight(v)    CGRectGetHeight((v).frame)
+#define v_getWidth(v)     CGRectGetWidth((v).frame)
+#define v_getMinX(v)      CGRectGetMinX((v).frame)
+#define v_getMinY(v)      CGRectGetMinY((v).frame)
+#define v_getMaxX(v)      CGRectGetMaxX((v).frame)
+#define v_getMaxY(v)      CGRectGetMaxY((v).frame)
+
 #endif
