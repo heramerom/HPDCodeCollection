@@ -79,10 +79,10 @@
 #define __notification_center   [NSNotificationCenter defaultCenter]
 #define NOTIFICATION_CENTER     __notification_center
 
-#define defaultString(value, defaultValue)  (((value) && value.length == 0)?(value):(defaultValue))
+#define defaultString(value, defaultValue)  (((value) && value.length != 0)?(value):(defaultValue))
 #define defaultObject(value, defaultValue)  ((value)?(value):(defaultValue))
 
-#define wasStringEmpty(str)              (((value) && value.length == 0)?YES:NO)
+#define wasStringEmpty(value)              ((!(value) || value.length == 0)?YES:NO)
 
 #define __format_string(format, ...)        [NSString stringWithFormat:format, __VA_ARGS__]
 #define NSStringWithFormat(format, ...)     [NSString stringWithFormat:format, __VA_ARGS__]
