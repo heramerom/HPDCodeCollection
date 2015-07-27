@@ -22,7 +22,7 @@
 
 - (BOOL)wasEmailFormat
 {
-    return [self wasMatchRegex:@"^(\\w+([-+.]\\w+)*@\\w+([-.]\\\\w+)*\\.\\w+([-.]\\w+)*)|(\\?)$"];
+    return [self wasMatchRegex:@"\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*"];
 }
 
 
