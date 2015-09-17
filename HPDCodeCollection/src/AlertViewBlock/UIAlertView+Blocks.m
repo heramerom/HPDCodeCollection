@@ -54,12 +54,12 @@ static CancelBlock _cancelBlock;
 
 + (void) showMessage:(NSString*) message
 {
-    [UIAlertView showAlertViewWithTitle:@"提示" message:message cancelButtonTitle:@"确定" otherButtonTitles:nil onDismiss:^(NSInteger buttonIndex) {} onCancel:^{}];
+    [UIAlertView showAlertViewWithTitle:@"Tip" message:message cancelButtonTitle:@"confirm" otherButtonTitles:nil onDismiss:^(NSInteger buttonIndex) {} onCancel:^{}];
 }
 
 + (void)showMessage:(NSString *)message withCancle:(CancelBlock)cancle
 {
-    [UIAlertView showAlertViewWithTitle:@"提示" message:message cancelButtonTitle:@"确定" otherButtonTitles:nil onDismiss:^(NSInteger buttonIndex) {} onCancel:cancle];
+    [UIAlertView showAlertViewWithTitle:@"Tip" message:message cancelButtonTitle:@"confirm" otherButtonTitles:nil onDismiss:^(NSInteger buttonIndex) {} onCancel:cancle];
 }
 
 
