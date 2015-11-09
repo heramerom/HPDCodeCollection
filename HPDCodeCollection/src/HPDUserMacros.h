@@ -79,7 +79,7 @@
 #define __notification_center   [NSNotificationCenter defaultCenter]
 #define NOTIFICATION_CENTER     __notification_center
 
-#define defaultString(value, defaultValue)  (((value) && value.length == 0)?(value):(defaultValue))
+#define defaultString(value, defaultValue)  (((value) && value.length != 0)?(value):(defaultValue))
 #define defaultObject(value, defaultValue)  ((value)?(value):(defaultValue))
 
 #define wasStringEmpty(value)              (((value) && value.length == 0)?YES:NO)
